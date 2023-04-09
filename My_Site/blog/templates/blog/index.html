@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
+{% endblock css_file %}
+
+{% block content %}
+
+{% comment %} {% include "blog/includes/header.html" %} {% endcomment %}
+
+<section id="welcome">
+  <header>
+    <img src="{% static 'blog/images/profile-pic.png' %}" alt="Sanket - Author Of This Blog">
+    <h2>SANKET'S BLOG</h2>
+  </header>
+  <P>Hi, I am Sanket and I love coding!</P>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+  <ul>
+    {% include "blog/includes/post.html" %}
+  </ul>
+</section>
+<section id="about">
+  <h2>What I do</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fuga, enim rem sapiente exercitationem corporis
+    laudantium similique maiores quibusdam, recusandae, iste obcaecati! Similique omnis quo officiis assumenda
+    cupiditate, eius eveniet.
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolorem quas quibusdam a asperiores dolor,
+    debitis rerum inventore laudantium odit fugiat tempora voluptas eligendi eveniet reiciendis assumenda animi libero
+    enim.</p>
+</section>
+{% endblock content %}
