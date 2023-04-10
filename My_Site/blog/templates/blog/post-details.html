@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+This Post Title
+{% endblock title %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/post-details.css' %}">
+{% endblock css_file %}
+
+{% block content %}
+
+<section id="summary">
+  <h2>Post Title</h2>
+  <article>
+    <img src="{% static 'blog/images/mountain.jpg' %}" alt="Post Title">
+    <address>By Sanket</address>
+    <div>
+      Last Updated on <time>April 10th</time>
+    </div>
+  </article>
+</section>
+
+<main>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim totam exercitationem commodi debitis libero sapiente
+    ipsa corrupti ducimus laboriosam iste beatae voluptate, vitae facilis asperiores, deserunt, aliquid amet ut itaque.
+  </p>
+
+  <p>
+    Facilis explicabo quia soluta? Provident maiores tempora animi eligendi quasi a architecto praesentium non mollitia
+    consequatur, porro deleniti natus laboriosam facere nobis, dolorum culpa soluta fuga. Obcaecati quae impedit odit.
+  </p>
+
+  <p>
+    Commodi officiis, deserunt vero esse dolorum unde illo, corporis temporibus, quibusdam a quae consequatur impedit?
+    Dolorum optio nam, illo aut quas qui fugit. Dolores repudiandae optio tempora ut. Porro, sunt.</p>
+
+</main>
+
+{% endblock content %}
